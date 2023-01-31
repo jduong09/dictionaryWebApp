@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" type="text/css" href="./assets/css/reset.css"/>
+  <link rel="stylesheet" type="text/css" href="./assets/css/styles.css"/>
+  <title>Frontend Mentor | Dictionary web app</title>
+</head>
+<body>
+  <header>
+    <h1>
+      <img id="header-logo" src="./assets/images/logo.svg" alt="Dictionary Logo"/>
+    </h1>
+    <div class="div-tools">
+      <ul class="list-tools">
+        <li id="list-item-change-font" class="list-item-tool">
+          Serif
+          <img id="img-arrow-down" src="./assets/images/icon-arrow-down.svg" alt="icon arrow down"/>
+        </li>
+        <li id="list-item-night-mode" class="list-item-tool">
+          <div id="div-btn-night-mode">
+            <span id="btn-night-mode"></span>
+          </div>
+          <img id="img-moon" src="./assets/images/icon-moon.svg" alt="icon moon"/> 
+        </li>
+      </ul>
+    </div>
+  </header>
+  <main>
+    <div class="div-main">
+      <form>
+        <input id="input-word" type="text" value="keyboard"/>
+        <input id="input-submit" type="submit" value=""/>
+      </form>
+      <div class="div-display-word">
+        <div>
+          <h2>keyboard</h2>
+          <span>/'ki:b&#8580;:d/</span>
+        </div>
+        <button>
+          <img id="img-play-btn" src=".//assets/images/icon-play.svg" alt="icon play"/>
+        </button>
+      </div>
+    </div>
+    <div id="div-noun" class="div-definitions">
+      <div>noun</div>
+      <div class="div-meaning">
+        <h3>Meaning</h3>
+        <ul class="list-meanings">
+          <li>(etc.) A set of keys used to operate a typewrite, computer etc.</li>
+          <li>A component of many instruments including the piano, organ, and harpsichord consisting of usually black and white keys that cause different tones to be produced when struck.</li>
+          <li>A device with keys of a musical keyboard, used to control electronic sound-producing devices which may be built into or separate from the keyboard device.</li>
+        </ul>
+      </div>
+      <div class="div-synonyms">
+        <h3>Synonyms</h3>
+        <ul class="list-synonyms">
+          <li class="list-item-synonym">electronic keyboard</li>
+        </ul>
+      </div>
+    </div>
+    <div id="div-verb" class="div-definitions">
+      <div>verb</div>
+      <div class="div-meaning">
+        <h3>Meaning</h3>
+        <ul class="list-meanings">
+          <li>To type on a computer keyboard.</li>
+        </ul>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <div class="div-source">
+      <h4>Source</h4>
+      https://en.wikitionary.org/wiki/keyboard
+      <img id="img-pop-out" src="./assets/images/icon-new-window.svg" alt="icon-new-window"/>
+    </div>
+  </footer>
+</body>
+</html>

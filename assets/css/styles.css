@@ -1,0 +1,255 @@
+@font-face {
+  font-family: 'Inconsolata';
+  src: url('../fonts/inconsolata/Inconsolata-VariableFont_wdth\,wght.ttf')
+  format("woff2-variations");
+  font-weight: 400 700;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('../fonts/inter/Inter-VariableFont_slnt\,wght.ttf')
+  format('woff2-variations');
+  font-weight: 400 700;
+}
+
+@font-face {
+  font-family: 'Lora';
+  src: url('../fonts/lora/Lora-VariableFont_wght.ttf')
+  format('woff2-variations');
+  font-weight: 400 700;
+}
+
+@font-face {
+  font-family: 'Lora';
+  src: url('../fonts/lora/Lora-Italic-VariableFont_wght.ttf')
+  format('woff2-variations');
+  font-weight: 700;
+  font-style: italic;
+}
+
+body {
+  font-family: 'Lora';
+  font-weight: 400;
+}
+
+#img-arrow-down, #btn-night-mode, #img-moon, #input-submit, #img-play-btn, #img-pop-out {
+  cursor: pointer;
+}
+
+/* Header */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 1rem;
+  font-family: 'Inter';
+}
+
+#header-logo {
+  width: 34px;
+  height: 38px;
+}
+
+.list-tools {
+  display: flex;
+  align-items: center;
+}
+
+.list-item-tool {
+  margin-left: 1rem;
+}
+
+#list-item-change-font {
+  font-weight: 700;
+}
+
+#img-arrow-down {
+  width: 14px;
+  height: 8px;
+}
+
+#list-item-night-mode {
+  display: flex;
+  align-items: center;
+}
+
+#div-btn-night-mode {
+  width: 2rem;
+  height: 1rem;
+  background-color: darkgrey;
+  border-radius: 500px;
+  position: relative;
+}
+
+#btn-night-mode {
+  display: block;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background-color: white;
+  position: absolute;
+  top: 1px;
+  left: 2px;
+}
+
+#img-moon {
+  width: 22px;
+  height: 22px;
+  display: block;
+  margin-left: .5rem;
+}
+/* Main */
+.div-main {
+  padding: 0 1rem 2rem 1rem;
+}
+
+form {
+  position: relative;
+}
+
+#input-word {
+  width: 100%;
+  padding: 1rem;
+  background-color: lightgray;
+  border-radius: 8px;
+}
+
+#input-submit {
+  display: block;
+  width: 18px;
+  height: 18px;
+  background-image: url('../images/icon-search.svg');
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+}
+
+.div-display-word {
+  display: flex;
+  justify-content: space-between;
+  margin: 2rem 0;
+}
+
+.div-display-word > div > h2 {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.div-display-word > div > span {
+  font-family: 'Inter';
+  color: hsl(274, 82%, 60%);
+}
+
+#img-play-btn {
+  width: 48px;
+  height: 48px;
+}
+
+.div-definitions {
+  padding: 0 1rem;
+}
+
+.div-definitions > div:first-of-type {
+  position: relative;
+  margin-bottom: 2rem;
+  font-family: 'Lora';
+  font-style: italic;
+}
+
+.div-definitions > div:first-of-type::after {
+  content: '';
+  width: 85%;
+  height: 2px;
+  background-color: lightgrey;
+  position: absolute;
+  top: 50%;
+  left: 15%;
+}
+
+.div-meaning {
+  margin-bottom: 2rem;
+}
+
+.div-meaning > h3 {
+  margin-bottom: 1rem;
+  color: hsl(0deg 0% 51%);
+}
+
+.list-meanings {
+  width: 90%;
+  margin: 0 0 0 auto;
+}
+
+.list-meanings > li {
+  position: relative;
+  margin-bottom: .5rem;
+}
+
+.list-meanings > li::before {
+  content: '';
+  width: 4px;
+  height: 4px;
+  background-color: hsl(274, 82%, 60%);
+  border-radius: 50%;
+  position: absolute;
+  top: 8px;
+  left: -16px;
+}
+
+.div-synonyms {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+
+.div-synonyms > h3 {
+  color: hsl(0deg 0% 51%);
+  margin-right: 1rem;
+}
+
+.list-synonyms {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.list-item-synonym {
+  color: hsl(274, 82%, 60%);
+  font-weight: 700;
+  margin-right: 1rem;
+}
+
+#div-verb {
+  position: relative;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+}
+
+#div-verb::after {
+  content: '';
+  width: calc(100% - 2rem);
+  height: 2px;
+  background-color: lightgrey;
+  position: absolute;
+  bottom: 0;
+  left: 1rem;
+}
+/* Footer */
+.div-source {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0 1rem 2rem 1rem;
+}
+
+.div-source > h4 {
+  color: hsl(0deg 0% 51%);
+  margin-right: 1rem;
+}
+#img-pop-out {
+  display: block;
+  width: 14px;
+  height: 14px;
+  margin-left: .5rem;
+}
