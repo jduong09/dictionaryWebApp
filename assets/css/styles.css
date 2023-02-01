@@ -32,7 +32,7 @@ body {
   font-weight: 400;
 }
 
-#img-arrow-down, #btn-night-mode, #img-moon, #input-submit, #img-play-btn, #img-pop-out {
+#img-arrow-down, #btn-night-mode, #img-moon, #input-submit, #img-play-btn, #btn-source-wiktionary, #img-pop-out {
   cursor: pointer;
 }
 
@@ -185,6 +185,11 @@ form {
   margin-bottom: .5rem;
 }
 
+.div-example {
+  margin-top: .5rem;
+  color: hsl(0deg 0% 51%);
+}
+
 .list-meanings > li::before {
   content: '';
   width: 4px;
@@ -220,13 +225,13 @@ form {
   margin-right: 1rem;
 }
 
-#div-verb {
+.div-definitions:last-of-type {
   position: relative;
   padding-bottom: 1rem;
   margin-bottom: 1rem;
 }
 
-#div-verb::after {
+.div-definitions:last-of-type::after {
   content: '';
   width: calc(100% - 2rem);
   height: 2px;
@@ -247,6 +252,11 @@ form {
   color: hsl(0deg 0% 51%);
   margin-right: 1rem;
 }
+
+#btn-source-wiktionary {
+  text-decoration: underline;
+}
+
 #img-pop-out {
   display: block;
   width: 14px;

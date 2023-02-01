@@ -33,6 +33,7 @@ const createDivDisplay = (objWord, audio) => {
 const createDivDefinition = (objMeaning) => {
   const divDefinition = document.createElement('div');
   divDefinition.classList.add('div-definitions');
+  divDefinition.id = `div-${objMeaning.partOfSpeech}`;
 
   const divPartOfSpeech = document.createElement('div');
   divPartOfSpeech.innerHTML = objMeaning.partOfSpeech;
@@ -53,6 +54,14 @@ const createDivDefinition = (objMeaning) => {
 
     const listItemMeaning = document.createElement('li');
     listItemMeaning.innerHTML = objDefinition.definition;
+
+    if (objDefinition.example) {
+      const divExample = document.createElement('div');
+      divExample.classList.add('div-example');
+      divExample.innerHTML = `"${objDefinition.example}"`;
+
+      listItemMeaning.append(divExample);
+    }
     listMeanings.append(listItemMeaning);
   }
 
@@ -60,7 +69,7 @@ const createDivDefinition = (objMeaning) => {
 
   divDefinition.append(divPartOfSpeech, divMeaning);
 
-  if (objMeaning.synonyms) {
+  if (objMeaning.synonyms.length) {
     const divSynonyms = document.createElement('div');
     divSynonyms.classList.add('div-synonyms');
     const listSynonyms = document.createElement('ul');
@@ -71,6 +80,7 @@ const createDivDefinition = (objMeaning) => {
     for (let j = 0; j < objMeaning.synonyms.length; j++) {
       const synonym = objMeaning.synonyms[j];
       const listItemSynonym = document.createElement('li');
+      listItemSynonym.classList.add('list-item-synonym');
       listItemSynonym.innerHTML = synonym;
       listSynonyms.append(listItemSynonym);
     }
@@ -99,6 +109,7 @@ const removeDivs = () => {
 const updatePage = (objWord) => {
   const main = document.querySelector('main');
   const divMain = document.querySelector('.div-main');
+  const btnSource = document.getElementById('btn-source-wikitionary');
   let audio;
 
   removeDivs();
@@ -121,10 +132,13 @@ const updatePage = (objWord) => {
     const divDefinition = createDivDefinition(wordMeaning);
     main.append(divDefinition);
   }
+
+  btnSource.innerHTML = objWord.sourceUrls[0];
 };
 
 document.addEventListener('DOMContentLoaded', () => {
   const formDictionary = document.getElementById("form-user-word");
+  const btnSource = document.getElementById('btn-source-wiktionary');
 
   formDictionary.addEventListener('submit', (e) => {
     e.preventDefault();
@@ -144,5 +158,12 @@ document.addEventListener('DOMContentLoaded', () => {
   
     http.open('GET', `https://api.dictionaryapi.dev/api/v2/entries/en/${inputWord}`, true);
     http.send();
+  });
+
+  btnSource.addEventListener('click', (e) => {
+    e.preventDefault();
+    const htmlLocation = btnSource.innerHTML;
+
+    window.open(htmlLocation, '_blank');
   });
 });
