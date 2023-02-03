@@ -344,3 +344,67 @@ body.night-active .div-source > h4 {
   height: 14px;
   margin-left: .5rem;
 }
+
+@media (min-width: 767px) {
+  header {
+    padding: 2rem 4rem;
+  }
+
+  .div-main {
+    padding: 0 4rem 2rem 4rem;
+  }
+
+  #img-play-btn {
+    width: 75px;
+    height: 75px;
+  }
+
+  .div-definitions, .div-verb {
+    padding: 0 4rem;
+  }
+
+  .div-definitions:last-of-type::after {
+    width: calc(100% - 8rem);
+    left: 4rem;
+  }
+
+  .div-source {
+    padding: 0 4rem;
+  }
+}
+
+@media (min-width: 922px) {
+  header, .div-main, .div-definitions, .div-verb, .div-definitions:last-of-type::after, .div-source {
+    padding-left: 6rem;
+    padding-right: 6rem;
+  }
+
+  .div-definitions:last-of-type::after {
+    width: calc(100% - 24rem);
+    left: 6rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  header, .div-main, .div-definitions, .div-verb, .div-definitions:last-of-type::after, .div-source {
+    padding-left: 10rem;
+    padding-right: 10rem;
+  }
+
+  .div-definitions:last-of-type::after {
+    width: calc(100% - 40rem);
+    left: 10rem;
+  }
+}
+
+@media (min-width: 1400px) {
+  header, .div-main, .div-definitions, .div-verb, .div-definitions:last-of-type::after, .div-source {
+    padding-left: 14rem;
+    padding-right: 14rem;
+  }
+
+  .div-definitions:last-of-type::after {
+    width: calc(100% - 56rem);
+    left: 14rem;
+  }
+}
