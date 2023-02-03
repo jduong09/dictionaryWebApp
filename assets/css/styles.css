@@ -1,3 +1,4 @@
+/* 'Inconsolata', monospace */
 @font-face {
   font-family: 'Inconsolata';
   src: url('../fonts/inconsolata/Inconsolata-VariableFont_wdth\,wght.ttf')
@@ -5,6 +6,7 @@
   font-weight: 400 700;
 }
 
+/* 'Inter', sans-serif */
 @font-face {
   font-family: 'Inter';
   src: url('../fonts/inter/Inter-VariableFont_slnt\,wght.ttf')
@@ -12,6 +14,7 @@
   font-weight: 400 700;
 }
 
+/* 'Lora', 'serif' */
 @font-face {
   font-family: 'Lora';
   src: url('../fonts/lora/Lora-VariableFont_wght.ttf')
@@ -30,9 +33,31 @@
 body {
   font-family: 'Lora';
   font-weight: 400;
+  min-height: 100vh;
 }
 
-#img-arrow-down, #btn-night-mode, #img-moon, #input-submit, #img-play-btn, #btn-source-wiktionary, #img-pop-out {
+body.night-active {
+  background-color: hsl(0, 0%, 0%);
+  color: hsl(0, 0%, 100%);
+}
+
+.serif {
+  font-family: 'Lora';
+}
+
+.sans-serif {
+  font-family: 'Inter';
+}
+
+.monospace {
+  font-family: 'Inconsolata';
+}
+
+.hide {
+  display: none !important;
+}
+
+#img-arrow-down, .list-available-fonts > li, #btn-night-mode, #img-moon, #input-submit, #img-play-btn, #btn-source-wiktionary, #img-pop-out {
   cursor: pointer;
 }
 
@@ -61,11 +86,37 @@ header {
 
 #list-item-change-font {
   font-weight: 700;
+  position: relative;
 }
 
 #img-arrow-down {
   width: 14px;
   height: 8px;
+}
+
+.list-available-fonts {
+  position: absolute;
+  right: 0;
+  z-index: 2;
+  border: 1px solid hsl(0, 0%, 0%);
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 4px;
+}
+
+body.night-active .list-available-fonts {
+  background-color: hsl(0, 0%, 0%);
+}
+
+.list-available-fonts > li {
+  padding: 1rem;
+}
+
+.list-available-fonts > li:hover {
+  background-color: hsl(274, 82%, 60%)
+}
+
+.list-available-fonts > li:last-of-type {
+  margin-bottom: 0;
 }
 
 #list-item-night-mode {
@@ -81,6 +132,10 @@ header {
   position: relative;
 }
 
+body.night-active #div-btn-night-mode {
+  background-color: hsl(274, 82%, 60%);
+}
+
 #btn-night-mode {
   display: block;
   width: 14px;
@@ -92,11 +147,21 @@ header {
   left: 2px;
 }
 
+#btn-night-mode.night-active {
+  left: initial;
+  right: 2px;
+  background-color: hsl(0, 0%, 100%);
+}
+
 #img-moon {
   width: 22px;
   height: 22px;
   display: block;
   margin-left: .5rem;
+}
+
+body.night-active #img-moon > path {
+  stroke: hsl(274, 82%, 60%);
 }
 /* Main */
 .div-main {
@@ -112,6 +177,10 @@ form {
   padding: 1rem;
   background-color: lightgray;
   border-radius: 8px;
+}
+
+body.night-active #input-word {
+  background-color: hsl(0deg 0% 15%);
 }
 
 #input-submit {
@@ -175,6 +244,10 @@ form {
   color: hsl(0deg 0% 51%);
 }
 
+body.night-active .div-meaning > h3 {
+  color: hsl(0, 0%, 100%);
+}
+
 .list-meanings {
   width: 90%;
   margin: 0 0 0 auto;
@@ -211,6 +284,10 @@ form {
 .div-synonyms > h3 {
   color: hsl(0deg 0% 51%);
   margin-right: 1rem;
+}
+
+body.night-active .div-synonyms > h3 {
+  color: hsl(0, 0%, 100%);
 }
 
 .list-synonyms {
@@ -251,6 +328,10 @@ form {
 .div-source > h4 {
   color: hsl(0deg 0% 51%);
   margin-right: 1rem;
+}
+
+body.night-active .div-source > h4 {
+  color: hsl(0, 0%, 100%);
 }
 
 #btn-source-wiktionary {

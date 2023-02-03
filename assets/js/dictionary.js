@@ -109,7 +109,7 @@ const removeDivs = () => {
 const updatePage = (objWord) => {
   const main = document.querySelector('main');
   const divMain = document.querySelector('.div-main');
-  const btnSource = document.getElementById('btn-source-wikitionary');
+  const btnSource = document.getElementById('btn-source-wiktionary');
   let audio;
 
   removeDivs();
@@ -134,6 +134,13 @@ const updatePage = (objWord) => {
   }
 
   btnSource.innerHTML = objWord.sourceUrls[0];
+
+  btnSource.addEventListener('click', (e) => {
+    e.preventDefault();
+    const htmlLocation = btnSource.innerHTML;
+
+    window.open(htmlLocation, '_blank');
+  })
 };
 
 document.addEventListener('DOMContentLoaded', () => {

@@ -7,6 +7,8 @@
   <link rel="stylesheet" type="text/css" href="./assets/css/reset.css"/>
   <link rel="stylesheet" type="text/css" href="./assets/css/styles.css"/>
   <script type="text/javascript" src="./assets/js/dictionary.js"></script>
+  <script type="text/javascript" src="./assets/js/fontStyle.js"></script>
+  <script type="text/javascript" src="./assets/js/lightDarkMode.js"></script>
   <title>Frontend Mentor | Dictionary web app</title>
 </head>
 <body>
@@ -17,14 +19,19 @@
     <div class="div-tools">
       <ul class="list-tools">
         <li id="list-item-change-font" class="list-item-tool">
-          Serif
+          <span id="span-current-font">Serif</span>
           <img id="img-arrow-down" src="./assets/images/icon-arrow-down.svg" alt="icon arrow down"/>
+          <ul class="list-available-fonts hide">
+            <li id="list-item-serif">Serif</li>
+            <li id="list-item-sans-serif">Sans-Serif</li>
+            <li id="list-item-monospace">Monospace</li>
+          </ul>
         </li>
         <li id="list-item-night-mode" class="list-item-tool">
           <div id="div-btn-night-mode">
             <span id="btn-night-mode"></span>
           </div>
-          <img id="img-moon" src="./assets/images/icon-moon.svg" alt="icon moon"/> 
+          <svg id="img-moon" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22"><path fill="none" stroke="#838383" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M1 10.449a10.544 10.544 0 0 0 19.993 4.686C11.544 15.135 6.858 10.448 6.858 1A10.545 10.545 0 0 0 1 10.449Z"/></svg>
         </li>
       </ul>
     </div>
