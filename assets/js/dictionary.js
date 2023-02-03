@@ -146,6 +146,7 @@ const updatePage = (objWord) => {
 document.addEventListener('DOMContentLoaded', () => {
   const formDictionary = document.getElementById("form-user-word");
   const btnSource = document.getElementById('btn-source-wiktionary');
+  const imgPlayBtn = document.getElementById('img-play-btn');
 
   formDictionary.addEventListener('submit', (e) => {
     e.preventDefault();
@@ -173,4 +174,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     window.open(htmlLocation, '_blank');
   });
+
+  imgPlayBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+
+    window.open('https://api.dictionaryapi.dev/media/pronunciations/en/keyboard-us.mp3', '_blank');
+  })
 });
